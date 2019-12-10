@@ -9,15 +9,11 @@ let horses = [];
 
 let d = 99999;
 
-const sortInt = (a, b) => {
-  return a - b;
-}
-
 for (let i = 0; i < N; i++) {
     horses.push(parseInt(readline()));
 }
 
-horses.sort(sortInt);
+horses.sort((a, b) => a - b);
 
 for (let i = 0; i < N - 1; i++) {
     if (horses[i + 1] - horses[i] < d) {
